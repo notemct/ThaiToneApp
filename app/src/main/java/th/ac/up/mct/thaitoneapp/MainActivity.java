@@ -1,5 +1,6 @@
 package th.ac.up.mct.thaitoneapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -15,6 +16,10 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         ActiveAndroid.initialize(this);
+
+        Intent toKamdiaoIntent = new Intent(MainActivity.this,KamDiaoSetActivity.class);
+        startActivity(toKamdiaoIntent);
+
     }
 
     @Override
