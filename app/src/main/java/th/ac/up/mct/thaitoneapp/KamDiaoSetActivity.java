@@ -28,19 +28,28 @@ public class KamDiaoSetActivity extends ActionBarActivity {
 
         inflater = LayoutInflater.from(this);
 
-        kamdiaoMainLayout = (LinearLayout) findViewById(R.id.KamdiaoMainLayout);
+        kamdiaoMainLayout = (LinearLayout) findViewById(R.id.KamdiaoMainLayout1);
 
         List<KamDiaoSet> kamdiaoSets = KamDiaoSet.getAll();
 
+        View.OnClickListener kamdiaosetOnclickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                KamDiaoSetButton btn = (KamDiaoSetButton)v;
+                //
+                Intent inttentkamdiao = new Intent(KamDiaoSetActivity.this,KamDiaoWordsActivity.class);
+                inttentkamdiao.putExtra("KAMDIAOSET_ID",btn.getKamDiaoSet().Id);
+                startActivity(inttentkamdiao);
 
+            }
+        };
 
-
-
+        // เอาค่าออกมาเป็นButton
         for(KamDiaoSet k : kamdiaoSets){
             KamDiaoSetButton kamdiaosetBn = new KamDiaoSetButton(this);
             kamdiaosetBn.setText(k.name);
             kamdiaosetBn.setKamDiaoSet(k);
-
+            kamdiaosetBn.setOnClickListener(kamdiaosetOnclickListener);
             kamdiaoMainLayout.addView(kamdiaosetBn);
         }
 
