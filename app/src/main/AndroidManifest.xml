@@ -26,7 +26,10 @@
         </activity>
         <activity
             android:name=".KamDiaoSetActivity"
-            android:label="@string/title_activity_kam_diao_set"></activity>
+            android:label="@string/title_activity_kam_diao_set" />
+        <activity
+            android:name=".KamDiaoWordsActivity"
+            android:label="@string/title_activity_kam_diao_words"></activity>
     </application>
 
 </manifest>
