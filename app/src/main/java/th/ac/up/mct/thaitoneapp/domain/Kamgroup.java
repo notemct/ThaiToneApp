@@ -2,19 +2,18 @@ package th.ac.up.mct.thaitoneapp.domain;
 
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
-
 /**
- * Created by chaow on 1/2/2016 AD.
+ * Created by MooMee on 14/1/2559.
  */
-public class KamDiao extends Model {
-
+public class Kamgroup extends Model {
     @Column(name = "KamThai")
     public String kamThai;
 
     @Column(name = "SET_ID")
-    public KamDiaoSet kamDiaoSet;
+    public KamGroupSet kamgroupSet;
 
     @Column(name = "Picture")
-    public KamDiao kamDiaoPicture;
+    public Kamgroup kamGroupSet;
+
 
 }
