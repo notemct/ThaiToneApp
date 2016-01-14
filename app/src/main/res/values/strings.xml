@@ -4,4 +4,5 @@
     <string name="title_activity_kam_diao_set">KamDiaoSetActivity</string>
     <string name="title_activity_kam_diao_word">KamDiaoWordActivity</string>
     <string name="title_activity_kam_diao_words">KamDiaoWordsActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
 </resources>

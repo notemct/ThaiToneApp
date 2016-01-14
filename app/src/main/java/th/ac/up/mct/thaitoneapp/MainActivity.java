@@ -3,15 +3,14 @@ package th.ac.up.mct.thaitoneapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
-
 import com.activeandroid.ActiveAndroid;
-
 import java.util.List;
-
 import th.ac.up.mct.thaitoneapp.domain.KamDiaoSet;
 
 public class MainActivity extends ActionBarActivity {
@@ -22,11 +21,16 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActiveAndroid.initialize(this);
+         ActiveAndroid.initialize(this);
 
-        Intent startKamdiaoSetActivityIntent = new Intent(MainActivity.this,KamDiaoSetActivity.class);
-        startActivity(startKamdiaoSetActivityIntent);
+
+       // Intent startKamdiaoSetActivityIntent = new Intent(MainActivity.this,KamDiaoSetActivity.class);
+        //startActivity(startKamdiaoSetActivityIntent);
+
     }
+
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,5 +52,9 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void onClickKamdiao(View v){
+        Intent i = new Intent(getApplicationContext(),KamDiaoSetActivity.class);
+        startActivity(i);
     }
 }
