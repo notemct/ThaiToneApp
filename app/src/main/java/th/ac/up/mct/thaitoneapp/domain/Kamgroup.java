@@ -7,6 +7,7 @@ import com.activeandroid.annotation.Column;
  */
 public class Kamgroup extends Model {
     @Column(name = "KamThai")
+
     public String kamThai;
 
     @Column(name = "SET_ID")
