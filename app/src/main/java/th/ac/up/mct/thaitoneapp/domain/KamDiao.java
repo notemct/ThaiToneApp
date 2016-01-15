@@ -15,6 +15,6 @@ public class KamDiao extends Model {
     public KamDiaoSet kamDiaoSet;
 
     @Column(name = "Picture")
-    public KamDiao kamDiaoPicture;
+    public String picture;
 
 }

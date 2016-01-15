@@ -6,15 +6,26 @@ import com.activeandroid.annotation.Column;
  * Created by MooMee on 14/1/2559.
  */
 public class Kamgroup extends Model {
-    @Column(name = "KamThai")
 
-    public String kamThai;
+    @Column(name="Id")
+    public Integer Id;
+
+    @Column(name = "Word")
+    public String word;
+
+    @Column(name = "IPA")
+    public String ipa;
+
+    @Column(name = "MeaningEN")
+    public String meaningEN;
 
     @Column(name = "SET_ID")
     public KamGroupSet kamgroupSet;
 
     @Column(name = "Picture")
-    public Kamgroup kamGroupSet;
+    public String picture;
+
+
 
 
 }

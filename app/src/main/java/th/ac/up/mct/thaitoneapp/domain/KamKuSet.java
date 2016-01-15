@@ -14,4 +14,8 @@ public class KamKuSet extends Model {
 
     @Column(name = "NAME")
     public String name;
+
+    @Column(name = "Picture")
+    public String picture;
+
 }
