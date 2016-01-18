@@ -5,4 +5,7 @@
     <string name="title_activity_kam_diao_word">KamDiaoWordActivity</string>
     <string name="title_activity_kam_diao_words">KamDiaoWordsActivity</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_kam_ku_set">KamKuSetActivity</string>
+    <string name="title_activity_kam_group_set">KamGroupSetActivity</string>
+    <string name="title_activity_symbol_set">SymbolSetActivity</string>
 </resources>

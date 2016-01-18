@@ -10,14 +10,15 @@ import java.util.List;
 /**
  * Created by chaow on 1/2/2016 AD.
  */
-@Table(name = "KamDiaoSet",id="Id")
+@Table(name = "KamDiaoSet")
 public class KamDiaoSet extends Model {
 
-    @Column(name="Id")
-    public Integer Id;
 
     @Column(name = "NAME")
     public String name;
+
+    @Column(name = "Picture")
+    public String picture;
 
 
     public List<KamDiao> kamDiaos() {

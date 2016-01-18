@@ -10,8 +10,6 @@ import java.util.List;
  */
 public class KamGroupSet extends Model {
 
-    @Column(name="Id")
-    public Integer Id;
 
     @Column(name = "NAME")
     public String name;

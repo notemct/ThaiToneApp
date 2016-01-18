@@ -7,12 +7,29 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="th.ac.up.mct.thaitoneapp.KamDiaoWordsActivity">
+    tools:context="th.ac.up.mct.thaitoneapp.KamDiaoWordsActivity"
+    android:background="@drawable/foot2">
+    <LinearLayout
+        android:id="@+id/header"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:id="@+id/imageView"
+            android:background="@drawable/bar_tta" />
+
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="20dp"
         android:id="@+id/KamdiaoWordsMainLayout"
         android:gravity="center_vertical">
 

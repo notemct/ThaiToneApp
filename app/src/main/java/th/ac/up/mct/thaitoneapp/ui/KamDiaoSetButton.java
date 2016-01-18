@@ -5,13 +5,14 @@ import android.content.Context;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import th.ac.up.mct.thaitoneapp.domain.KamDiaoSet;
 
 /**
  * Created by chaow on 1/2/2016 AD.
  */
-public class KamDiaoSetButton extends Button {
+public class KamDiaoSetButton extends ImageButton {
 
     private KamDiaoSet kamDiaoSet;
 

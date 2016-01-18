@@ -1,6 +1,9 @@
 package th.ac.up.mct.thaitoneapp;
 
 import android.content.Intent;
+import android.graphics.Canvas;
+import android.graphics.ColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
@@ -28,7 +31,7 @@ public class KamDiaoSetActivity extends ActionBarActivity {
 
         inflater = LayoutInflater.from(this);
 
-        kamdiaoMainLayout = (LinearLayout) findViewById(R.id.KamdiaoMainLayout1);
+        kamdiaoMainLayout = (LinearLayout) findViewById(R.id.KamdiaoMainLayout);
 
         List<KamDiaoSet> kamdiaoSets = KamDiaoSet.getAll();
 
@@ -38,7 +41,7 @@ public class KamDiaoSetActivity extends ActionBarActivity {
                 KamDiaoSetButton btn = (KamDiaoSetButton)v;
                 //
                 Intent inttentkamdiao = new Intent(KamDiaoSetActivity.this,KamDiaoWordsActivity.class);
-                inttentkamdiao.putExtra("KAMDIAOSET_ID",btn.getKamDiaoSet().Id);
+                inttentkamdiao.putExtra("KAMDIAOSET_ID",btn.getKamDiaoSet().getId());
                 startActivity(inttentkamdiao);
 
             }
@@ -47,7 +50,12 @@ public class KamDiaoSetActivity extends ActionBarActivity {
         // เอาค่าออกมาเป็นButton
         for(KamDiaoSet k : kamdiaoSets){
             KamDiaoSetButton kamdiaosetBn = new KamDiaoSetButton(this);
-            kamdiaosetBn.setText(k.name);
+//            Log.i("K_PICTURE",k.getId().toString());
+//            Log.i("K_PICTURE",k.picture);
+            int id= getResources().getIdentifier(k.picture, "drawable", getPackageName());
+            //int id=R.drawable.kamset_1_picture;
+            Log.i("ID",Integer.toString(id));
+            kamdiaosetBn.setBackgroundResource(id);
             kamdiaosetBn.setKamDiaoSet(k);
             kamdiaosetBn.setOnClickListener(kamdiaosetOnclickListener);
             kamdiaoMainLayout.addView(kamdiaosetBn);

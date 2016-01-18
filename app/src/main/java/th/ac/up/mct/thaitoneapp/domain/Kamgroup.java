@@ -7,9 +7,6 @@ import com.activeandroid.annotation.Column;
  */
 public class Kamgroup extends Model {
 
-    @Column(name="Id")
-    public Integer Id;
-
     @Column(name = "Word")
     public String word;
 

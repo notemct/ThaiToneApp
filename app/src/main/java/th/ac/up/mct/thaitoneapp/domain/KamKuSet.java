@@ -9,8 +9,6 @@ import com.activeandroid.query.Select;
  */
 public class KamKuSet extends Model {
 
-    @Column(name="Id")
-    public Integer Id;
 
     @Column(name = "NAME")
     public String name;

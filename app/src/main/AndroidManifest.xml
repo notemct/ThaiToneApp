@@ -30,6 +30,15 @@
         <activity
             android:name=".KamDiaoWordsActivity"
             android:label="@string/title_activity_kam_diao_words" />
+        <activity
+            android:name=".KamKuSetActivity"
+            android:label="@string/title_activity_kam_ku_set" />
+        <activity
+            android:name=".KamGroupSetActivity"
+            android:label="@string/title_activity_kam_group_set" />
+        <activity
+            android:name=".SymbolSetActivity"
+            android:label="@string/title_activity_symbol_set"></activity>
     </application>
 
 </manifest>

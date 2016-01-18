@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import com.activeandroid.ActiveAndroid;
 import java.util.List;
@@ -21,7 +23,8 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-         ActiveAndroid.initialize(this);
+
+        ActiveAndroid.initialize(this);
 
 
        // Intent startKamdiaoSetActivityIntent = new Intent(MainActivity.this,KamDiaoSetActivity.class);
@@ -55,6 +58,18 @@ public class MainActivity extends ActionBarActivity {
     }
     public void onClickKamdiao(View v){
         Intent i = new Intent(getApplicationContext(),KamDiaoSetActivity.class);
+        startActivity(i);
+    }
+    public void onClickKamku(View v){
+        Intent i = new Intent(getApplicationContext(),KamKuSetActivity.class);
+        startActivity(i);
+    }
+    public void onClickKamgroup(View v){
+        Intent i = new Intent(getApplicationContext(),KamGroupSetActivity.class);
+        startActivity(i);
+    }
+    public void onClickSymbol(View v){
+        Intent i = new Intent(getApplicationContext(),SymbolSetActivity.class);
         startActivity(i);
     }
 }

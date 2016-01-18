@@ -8,8 +8,6 @@ import com.activeandroid.annotation.Column;
  */
 public class Kamku  extends Model {
 
-    @Column(name="Id")
-    public Integer Id;
 
     @Column(name = "Word1")
     public String word1;
