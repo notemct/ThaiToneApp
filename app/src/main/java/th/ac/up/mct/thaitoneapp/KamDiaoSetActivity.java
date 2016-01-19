@@ -7,9 +7,13 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Adapter;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
 import java.util.List;
@@ -24,6 +28,8 @@ public class KamDiaoSetActivity extends ActionBarActivity {
 
     LayoutInflater inflater;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +38,7 @@ public class KamDiaoSetActivity extends ActionBarActivity {
         inflater = LayoutInflater.from(this);
 
         kamdiaoMainLayout = (LinearLayout) findViewById(R.id.KamdiaoMainLayout);
+
 
         List<KamDiaoSet> kamdiaoSets = KamDiaoSet.getAll();
 
@@ -52,11 +59,12 @@ public class KamDiaoSetActivity extends ActionBarActivity {
             KamDiaoSetButton kamdiaosetBn = new KamDiaoSetButton(this);
 //            Log.i("K_PICTURE",k.getId().toString());
 //            Log.i("K_PICTURE",k.picture);
-            int id= getResources().getIdentifier(k.picture, "drawable", getPackageName());
+            int id = getResources().getIdentifier(k.picture, "drawable", getPackageName());
             //int id=R.drawable.kamset_1_picture;
-            Log.i("ID",Integer.toString(id));
+            Log.i("ID", Integer.toString(id));
             kamdiaosetBn.setBackgroundResource(id);
             kamdiaosetBn.setKamDiaoSet(k);
+            kamdiaosetBn.setLayoutParams(new LinearLayout.LayoutParams(250, 250));
             kamdiaosetBn.setOnClickListener(kamdiaosetOnclickListener);
             kamdiaoMainLayout.addView(kamdiaosetBn);
         }
