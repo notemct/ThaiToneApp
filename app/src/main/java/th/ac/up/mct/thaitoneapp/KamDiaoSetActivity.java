@@ -64,7 +64,7 @@ public class KamDiaoSetActivity extends ActionBarActivity {
             Log.i("ID", Integer.toString(id));
             kamdiaosetBn.setBackgroundResource(id);
             kamdiaosetBn.setKamDiaoSet(k);
-            kamdiaosetBn.setLayoutParams(new LinearLayout.LayoutParams(250, 250));
+            kamdiaosetBn.setLayoutParams(new LinearLayout.LayoutParams(300, 300));
             kamdiaosetBn.setOnClickListener(kamdiaosetOnclickListener);
             kamdiaoMainLayout.addView(kamdiaosetBn);
         }

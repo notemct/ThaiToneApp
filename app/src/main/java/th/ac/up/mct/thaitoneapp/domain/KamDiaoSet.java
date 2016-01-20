@@ -29,7 +29,7 @@ public class KamDiaoSet extends Model {
         return new Select().from(KamDiaoSet.class).execute();
     }
 
-    public static KamDiaoSet get(int id){
+    public static KamDiaoSet get(long id){
         return new Select().from(KamDiaoSet.class).where("Id = ?",id).executeSingle();
     }
 
