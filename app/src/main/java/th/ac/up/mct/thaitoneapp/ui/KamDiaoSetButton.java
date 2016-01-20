@@ -17,18 +17,22 @@ public class KamDiaoSetButton extends ImageButton {
     private KamDiaoSet kamDiaoSet;
 
     public KamDiaoSet getKamDiaoSet() {
+
         return kamDiaoSet;
     }
 
     public void setKamDiaoSet(KamDiaoSet kamDiaoSet) {
+
         this.kamDiaoSet = kamDiaoSet;
     }
 
     public KamDiaoSetButton(Context context) {
+
         super(context);
     }
 
     public KamDiaoSetButton(Context context, AttributeSet attrs) {
+
         super(context, attrs);
     }
 
