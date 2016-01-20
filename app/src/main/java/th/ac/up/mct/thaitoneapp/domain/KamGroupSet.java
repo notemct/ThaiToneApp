@@ -15,5 +15,17 @@ public class KamGroupSet extends Model {
     public String name;
 
     @Column(name = "Picture")
-    public String picturet;
+    public String picture;
+
+    public List<Kamgroup> kamgroups() {
+        return getMany(Kamgroup.class, "SET_ID");
+    }
+
+    public static List<KamGroupSet> getAll(){
+        return new Select().from(KamGroupSet.class).execute();
+    }
+
+    public static KamGroupSet get(long id){
+        return new Select().from(KamGroupSet.class).where("Id = ?",id).executeSingle();
+    }
 }

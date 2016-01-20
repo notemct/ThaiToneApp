@@ -36,7 +36,7 @@ public class KamKuSetActivity extends ActionBarActivity {
                 KamKuSetButton btn = (KamKuSetButton)v;
                 //
                 Intent inttentkamku = new Intent(KamKuSetActivity.this,KamKuWordsActivity.class);
-                inttentkamku.putExtra("KAMDIAOSET_ID",btn.getKamKuSet().getId());
+                inttentkamku.putExtra("KAMKUSET_ID",btn.getKamKuSet().getId());
                 startActivity(inttentkamku);
 
             }
