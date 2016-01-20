@@ -38,7 +38,10 @@
             android:label="@string/title_activity_kam_group_set" />
         <activity
             android:name=".SymbolSetActivity"
-            android:label="@string/title_activity_symbol_set"></activity>
+            android:label="@string/title_activity_symbol_set" />
+        <activity
+            android:name=".KamKuWordsActivity"
+            android:label="@string/title_activity_kam_ku_words"></activity>
     </application>
 
 </manifest>
