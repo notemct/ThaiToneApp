@@ -46,6 +46,7 @@ public class KamKuSetActivity extends ActionBarActivity {
             KamKuSetButton kamkusetBn = new KamKuSetButton(this);
 
             int id = getResources().getIdentifier(k.picture, "drawable", getPackageName());
+            Log.i("K.PICTURE", k.picture);
             Log.i("ID", Integer.toString(id));
             kamkusetBn.setBackgroundResource(id);
             kamkusetBn.setKamKuSet(k);
@@ -54,6 +55,4 @@ public class KamKuSetActivity extends ActionBarActivity {
             kamkuMainLayout.addView(kamkusetBn);
         }
     }
-
-
 }

@@ -21,7 +21,7 @@ public class KamDiaoWordsActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kam_diao_words);
-        kamdiaoWordsMainLayout = (LinearLayout)findViewById(R.id.KamdiaoWordsMainLayout1);
+        kamdiaoWordsMainLayout = (LinearLayout)findViewById(R.id.KamdiaoWordsMainLayout);
 
         Intent intent = getIntent();
         long KamdiaoSetID = intent.getLongExtra("KAMDIAOSET_ID", 0);
@@ -34,6 +34,10 @@ public class KamDiaoWordsActivity extends ActionBarActivity {
         // เอาค่าออกมาเป็นButton
         for(KamDiao k : set.kamDiaos()){
             Button kamdiaoBtn =new Button(this);
+            int id = getResources().getIdentifier(k.picture, "drawable", getPackageName());
+            Log.i("ID", Integer.toString(id));
+            kamdiaoBtn.setBackgroundResource(id);
+
             kamdiaoBtn.setText(k.kamThai);
             kamdiaoWordsMainLayout.addView(kamdiaoBtn);
         }
