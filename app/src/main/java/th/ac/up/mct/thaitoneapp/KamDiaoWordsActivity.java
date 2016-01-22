@@ -18,12 +18,15 @@ import th.ac.up.mct.thaitoneapp.ui.KamDiaoWordButton;
 public class KamDiaoWordsActivity extends ActionBarActivity {
 
     LinearLayout kamdiaoWordsMainLayout;
+    LayoutInflater inflater;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kam_diao_words);
+        inflater = LayoutInflater.from(this);
         kamdiaoWordsMainLayout = (LinearLayout)findViewById(R.id.KamdiaoWordsMainLayout);
+        List<KamDiao> kamDiaos = KamDiao.getAll();
 
         Intent intent = getIntent();
         long KamdiaoSetID = intent.getLongExtra("KAMDIAOSET_ID", 0);
@@ -45,12 +48,14 @@ public class KamDiaoWordsActivity extends ActionBarActivity {
 
         // เอาค่าออกมาเป็นButton
         for(KamDiao k : set.kamDiaos()){
-            Button kamdiaoBtn =new Button(this);
+            KamDiaoWordButton kamdiaowordbtn = new KamDiaoWordButton(this);
             int id = getResources().getIdentifier(k.picture, "drawable", getPackageName());
-            kamdiaoBtn.setBackgroundResource(id);
-            kamdiaoBtn.setText(k.kamThai);
-            kamdiaoBtn.setOnClickListener(kamWordOnClickListener);
-            kamdiaoWordsMainLayout.addView(kamdiaoBtn);
+            kamdiaowordbtn.setBackgroundResource(id);
+            kamdiaowordbtn.setKamDiao(k);
+            kamdiaowordbtn.setLayoutParams(new LinearLayout.LayoutParams(300, 300));
+           // kamdiaoBtn.setText(k.kamThai);
+            kamdiaowordbtn.setOnClickListener(kamWordOnClickListener);
+            kamdiaoWordsMainLayout.addView(kamdiaowordbtn);
         }
     }
 }

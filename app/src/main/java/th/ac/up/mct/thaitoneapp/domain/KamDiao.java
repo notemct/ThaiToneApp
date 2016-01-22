@@ -14,11 +14,18 @@ public class KamDiao extends Model {
     @Column(name = "KamThai")
     public String kamThai;
 
-    @Column(name = "SET_ID")
-    public KamDiaoSet kamDiaoSet;
+
 
     @Column(name = "Picture")
     public String picture;
+
+    public List<KamDiao> kamDiaoss() {
+        return getMany(KamDiao.class, "SET_ID");
+    }
+
+    public static List<KamDiao> getAll(){
+        return new Select().from(KamDiao.class).execute();
+    }
 
     public static KamDiao get(long id){
         return new Select().from(KamDiao.class).where("Id = ?",id).executeSingle();

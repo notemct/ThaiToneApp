@@ -21,6 +21,7 @@ public class KamDiaoWordButton extends ImageButton {
     }
 
     public void setKamDiao(KamDiao kamDiao) {
+
         this.kamDiao = kamDiao;
     }
 
