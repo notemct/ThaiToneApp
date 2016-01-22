@@ -34,11 +34,9 @@ public class KamKuSetActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 KamKuSetButton btn = (KamKuSetButton)v;
-                //
                 Intent inttentkamku = new Intent(KamKuSetActivity.this,KamKuWordsActivity.class);
                 inttentkamku.putExtra("KAMKUSET_ID",btn.getKamKuSet().getId());
                 startActivity(inttentkamku);
-
             }
         };
 
@@ -46,8 +44,6 @@ public class KamKuSetActivity extends ActionBarActivity {
             KamKuSetButton kamkusetBn = new KamKuSetButton(this);
 
             int id = getResources().getIdentifier(k.picture, "drawable", getPackageName());
-            Log.i("K.PICTURE", k.picture);
-            Log.i("ID", Integer.toString(id));
             kamkusetBn.setBackgroundResource(id);
             kamkusetBn.setKamKuSet(k);
             kamkusetBn.setLayoutParams(new LinearLayout.LayoutParams(300, 300));

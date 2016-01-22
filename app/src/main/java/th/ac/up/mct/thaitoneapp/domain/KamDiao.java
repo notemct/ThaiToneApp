@@ -20,6 +20,8 @@ public class KamDiao extends Model {
     @Column(name = "Picture")
     public String picture;
 
-
+    public static KamDiao get(long id){
+        return new Select().from(KamDiao.class).where("Id = ?",id).executeSingle();
+    }
 
 }
