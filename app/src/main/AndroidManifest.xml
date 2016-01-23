@@ -47,7 +47,13 @@
             android:label="@string/title_activity_kam_group_words" />
         <activity
             android:name=".KamdiaoActivity"
-            android:label="@string/title_activity_kamdiao"></activity>
+            android:label="@string/title_activity_kamdiao" />
+        <activity
+            android:name=".KamkuActivity"
+            android:label="@string/title_activity_kamku" />
+        <activity
+            android:name=".KamgroupActivity"
+            android:label="@string/title_activity_kamgroup"></activity>
     </application>
 
 </manifest>

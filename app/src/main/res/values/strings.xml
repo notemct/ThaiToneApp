@@ -12,4 +12,6 @@
     <string name="title_activity_kam_group_words">KamGroupWordsActivity</string>
     <string name="title_activity_kamdiao_acitivity">KamdiaoAcitivity</string>
     <string name="title_activity_kamdiao">KamdiaoActivity</string>
+    <string name="title_activity_kamku">KamkuActivity</string>
+    <string name="title_activity_kamgroup">KamgroupActivity</string>
 </resources>

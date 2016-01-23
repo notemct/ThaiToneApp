@@ -2,7 +2,6 @@ package th.ac.up.mct.thaitoneapp.domain;
 
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
-import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
 import java.util.List;
@@ -19,8 +18,8 @@ public class KamKuSet extends Model {
     @Column(name = "Picture")
     public String picture;
 
-    public List<Kamku> kamkus() {
-        return getMany(Kamku.class, "SET_ID");
+    public List<KamKu> kamkus() {
+        return getMany(KamKu.class, "SET_ID");
     }
 
     public static List<KamKuSet> getAll(){

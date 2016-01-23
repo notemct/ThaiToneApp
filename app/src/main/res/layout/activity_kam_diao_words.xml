@@ -16,13 +16,23 @@
         android:layout_height="100dp">
 
         <ImageView
-            android:layout_width="fill_parent"
+            android:layout_width="100dp"
             android:layout_height="100dp"
+            android:background="@drawable/iconbar"
             android:id="@+id/imageView"
-            android:background="@drawable/bar_tta" />
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/bar_diao"
+            android:id="@+id/imageView2" />
 
 
     </LinearLayout>
+
+
 
     <LinearLayout
         android:orientation="vertical"

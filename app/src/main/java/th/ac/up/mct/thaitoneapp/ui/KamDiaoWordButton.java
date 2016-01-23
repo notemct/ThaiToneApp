@@ -17,6 +17,7 @@ public class KamDiaoWordButton extends ImageButton {
     private KamDiao kamDiao;
 
     public KamDiao getKamDiao() {
+
         return kamDiao;
     }
 

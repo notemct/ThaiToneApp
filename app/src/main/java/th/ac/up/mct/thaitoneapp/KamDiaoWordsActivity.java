@@ -24,9 +24,10 @@ public class KamDiaoWordsActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_kam_diao_words);
+
         inflater = LayoutInflater.from(this);
         kamdiaoWordsMainLayout = (LinearLayout)findViewById(R.id.KamdiaoWordsMainLayout);
-        List<KamDiao> kamDiaos = KamDiao.getAll();
+        List<KamDiao> kamdiaos = KamDiao.getAll();
 
         Intent intent = getIntent();
         long KamdiaoSetID = intent.getLongExtra("KAMDIAOSET_ID", 0);
@@ -39,17 +40,18 @@ public class KamDiaoWordsActivity extends ActionBarActivity {
             public void onClick(View v) {
                 KamDiaoWordButton btn = (KamDiaoWordButton)v;
                 //
-                Intent inttentkamgroup = new Intent(KamDiaoWordsActivity.this,KamdiaoActivity.class);
-                inttentkamgroup.putExtra("KAMDIAO_ID", btn.getKamDiao().getId());
-                startActivity(inttentkamgroup);
+                Intent inttentkamdiao = new Intent(KamDiaoWordsActivity.this,KamdiaoActivity.class);
+                inttentkamdiao.putExtra("KAMDIAO_ID", btn.getKamDiao().getId());
+                startActivity(inttentkamdiao);
             }
         };
 
 
         // เอาค่าออกมาเป็นButton
-        for(KamDiao k : set.kamDiaos()){
+        for(KamDiao k : kamdiaos){
             KamDiaoWordButton kamdiaowordbtn = new KamDiaoWordButton(this);
             int id = getResources().getIdentifier(k.picture, "drawable", getPackageName());
+            Log.i("ID", Integer.toString(id));
             kamdiaowordbtn.setBackgroundResource(id);
             kamdiaowordbtn.setKamDiao(k);
             kamdiaowordbtn.setLayoutParams(new LinearLayout.LayoutParams(300, 300));

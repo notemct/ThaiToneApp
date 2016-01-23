@@ -2,11 +2,14 @@ package th.ac.up.mct.thaitoneapp.domain;
 
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
+import com.activeandroid.query.Select;
+
+import java.util.List;
 
 /**
  * Created by MooMee on 14/1/2559.
  */
-public class Kamku  extends Model {
+public class KamKu extends Model {
 
 
     @Column(name = "Word1")
@@ -35,5 +38,18 @@ public class Kamku  extends Model {
 
     @Column(name = "Picture")
     public String picture;
+
+    public List<KamKu> kamKuss() {
+        return getMany(KamKu.class, "SET_ID");
+    }
+
+    public static List<KamKu> getAll(){
+        return new Select().from(KamKu.class).execute();
+    }
+
+    public static KamKu get(long id){
+        return new Select().from(KamKu.class).where("Id = ?",id).executeSingle();
+    }
+
 
 }

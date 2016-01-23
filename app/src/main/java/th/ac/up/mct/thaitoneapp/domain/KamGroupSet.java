@@ -1,7 +1,6 @@
 package th.ac.up.mct.thaitoneapp.domain;
 import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
-import com.activeandroid.annotation.Table;
 import com.activeandroid.query.Select;
 
 import java.util.List;
@@ -17,8 +16,8 @@ public class KamGroupSet extends Model {
     @Column(name = "Picture")
     public String picture;
 
-    public List<Kamgroup> kamgroups() {
-        return getMany(Kamgroup.class, "SET_ID");
+    public List<KamGroup> kamgroups() {
+        return getMany(KamGroup.class, "SET_ID");
     }
 
     public static List<KamGroupSet> getAll(){
