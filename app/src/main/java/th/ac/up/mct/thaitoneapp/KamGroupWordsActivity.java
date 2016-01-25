@@ -27,7 +27,7 @@ public class KamGroupWordsActivity extends ActionBarActivity {
 
         inflater = LayoutInflater.from(this);
         kamgroupWordsMainLayout = (LinearLayout)findViewById(R.id.kamgroupWordMainLayout);
-        List<KamGroup> kamGroups = KamGroup.getAll();
+
         Intent intent = getIntent();
         long KamgroupSetID = intent.getLongExtra("KAMGROUPSET_ID", 0);
         KamGroupSet set = KamGroupSet.get(KamgroupSetID);
@@ -44,7 +44,7 @@ public class KamGroupWordsActivity extends ActionBarActivity {
             }
         };
 
-        for(KamGroup k : kamGroups){
+        for(KamGroup k : set.kamgroups()){
             KamGroupWordButton kamgroupwordbtn = new KamGroupWordButton(this);
             int id = getResources().getIdentifier(k.picture, "drawable", getPackageName());
             Log.i("ID", Integer.toString(id));

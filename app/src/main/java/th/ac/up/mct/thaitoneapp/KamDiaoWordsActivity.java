@@ -27,7 +27,6 @@ public class KamDiaoWordsActivity extends ActionBarActivity {
 
         inflater = LayoutInflater.from(this);
         kamdiaoWordsMainLayout = (LinearLayout)findViewById(R.id.KamdiaoWordsMainLayout);
-        List<KamDiao> kamdiaos = KamDiao.getAll();
 
         Intent intent = getIntent();
         long KamdiaoSetID = intent.getLongExtra("KAMDIAOSET_ID", 0);
@@ -48,7 +47,7 @@ public class KamDiaoWordsActivity extends ActionBarActivity {
 
 
         // เอาค่าออกมาเป็นButton
-        for(KamDiao k : kamdiaos){
+        for(KamDiao k : set.kamDiaos()){
             KamDiaoWordButton kamdiaowordbtn = new KamDiaoWordButton(this);
             int id = getResources().getIdentifier(k.picture, "drawable", getPackageName());
             Log.i("ID", Integer.toString(id));

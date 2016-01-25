@@ -26,6 +26,9 @@ public class KamGroup extends Model {
     @Column(name = "Picture")
     public String picture;
 
+    @Column(name = "PictureWord")
+    public String pictureword;
+
     public List<KamGroup> kamGroupss() {
         return getMany(KamGroup.class, "SET_ID");
     }

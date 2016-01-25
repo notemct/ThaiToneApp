@@ -15,9 +15,11 @@ public class KamDiao extends Model {
     public String kamThai;
 
 
-
     @Column(name = "Picture")
     public String picture;
+
+    @Column(name = "PictureWord")
+    public String pictureword;
 
     public List<KamDiao> kamDiaoss() {
         return getMany(KamDiao.class, "SET_ID");

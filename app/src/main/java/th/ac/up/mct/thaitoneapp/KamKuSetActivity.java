@@ -46,7 +46,7 @@ public class KamKuSetActivity extends ActionBarActivity {
             int id = getResources().getIdentifier(k.picture, "drawable", getPackageName());
             kamkusetBn.setBackgroundResource(id);
             kamkusetBn.setKamKuSet(k);
-            kamkusetBn.setLayoutParams(new LinearLayout.LayoutParams(700,300 ));
+            kamkusetBn.setLayoutParams(new LinearLayout.LayoutParams(850,300 ));
             kamkusetBn.setOnClickListener(kamkusetOnclickListener);
             kamkuMainLayout.addView(kamkusetBn);
         }

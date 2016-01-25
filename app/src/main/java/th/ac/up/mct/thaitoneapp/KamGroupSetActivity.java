@@ -50,7 +50,7 @@ public class KamGroupSetActivity extends ActionBarActivity {
         Log.i("ID", Integer.toString(id));
         kamgroupsetBn.setBackgroundResource(id);
         kamgroupsetBn.setKamGroupSet(k);
-        kamgroupsetBn.setLayoutParams(new LinearLayout.LayoutParams(650, 300));
+        kamgroupsetBn.setLayoutParams(new LinearLayout.LayoutParams(850, 300));
         kamgroupsetBn.setOnClickListener(kamgroupsetOnclickListener);
         kamgroupMainLayout.addView(kamgroupsetBn);
     }

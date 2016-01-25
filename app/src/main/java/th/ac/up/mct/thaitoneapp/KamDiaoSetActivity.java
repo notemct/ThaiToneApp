@@ -40,6 +40,7 @@ public class KamDiaoSetActivity extends ActionBarActivity {
         kamdiaoMainLayout = (LinearLayout) findViewById(R.id.KamdiaoMainLayout);
 
 
+
         List<KamDiaoSet> kamdiaoSets = KamDiaoSet.getAll();
 
         View.OnClickListener kamdiaosetOnclickListener = new View.OnClickListener() {

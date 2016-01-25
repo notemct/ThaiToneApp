@@ -26,7 +26,7 @@ public class KamKuWordsActivity extends ActionBarActivity {
 
         inflater = LayoutInflater.from(this);
         kamkuWordsMainLayout = (LinearLayout)findViewById(R.id.kamkuWordMainLayout);
-        List<KamKu> kamKus = KamKu.getAll();
+
         Intent intent = getIntent();
         long KamkuSetID = intent.getLongExtra("KAMKUSET_ID", 0);
         KamKuSet set = KamKuSet.get(KamkuSetID);
@@ -42,13 +42,13 @@ public class KamKuWordsActivity extends ActionBarActivity {
             }
         };
 
-        for(KamKu k : kamKus){
+        for(KamKu k : set.kamkus()){
             KamKuWordButton kamkuwordbtn = new KamKuWordButton(this);
             int id = getResources().getIdentifier(k.picture, "drawable", getPackageName());
             Log.i("ID", Integer.toString(id));
             kamkuwordbtn.setBackgroundResource(id);
             kamkuwordbtn.setKamKu(k);
-            kamkuwordbtn.setLayoutParams(new LinearLayout.LayoutParams(300, 300));
+            kamkuwordbtn.setLayoutParams(new LinearLayout.LayoutParams(850, 300));
             // kamdiaoBtn.setText(k.kamThai);
             kamkuwordbtn.setOnClickListener(kamkuWordOnClickListener);
             kamkuWordsMainLayout.addView(kamkuwordbtn);

@@ -32,16 +32,19 @@
 
     </LinearLayout>
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/header"
         android:layout_marginTop="20dp"
         android:id="@+id/KamdiaoWordsMainLayout"
-        android:gravity="center_vertical">
+        android:gravity="center">
 
     </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

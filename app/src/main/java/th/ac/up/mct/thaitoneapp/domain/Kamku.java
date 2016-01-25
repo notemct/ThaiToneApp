@@ -38,6 +38,8 @@ public class KamKu extends Model {
 
     @Column(name = "Picture")
     public String picture;
+    @Column(name = "PictureWord")
+    public String pictureword;
 
     public List<KamKu> kamKuss() {
         return getMany(KamKu.class, "SET_ID");
