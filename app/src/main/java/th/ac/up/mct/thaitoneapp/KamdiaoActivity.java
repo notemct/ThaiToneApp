@@ -23,17 +23,12 @@ import th.ac.up.mct.thaitoneapp.ui.KamdiaoButton;
 
 public class KamdiaoActivity extends ActionBarActivity {
 
-    //private KamDiao currentKamdiao;
-    LinearLayout kamdiaoactivityMainLayout;
-    LayoutInflater inflater;
     private ImageButton microphoneButton;
     private ImageButton spekerButton;
     protected static final int RESULT_SPEECH = 1;
     private TextView txtText;
 
     MediaPlayer mySound;
-
-    ImageButton SpekerButton;
 
     @Override
     protected void onStop() {
@@ -80,7 +75,6 @@ public class KamdiaoActivity extends ActionBarActivity {
 
 
 
-                inflater = LayoutInflater.from(this);
 
         ImageView kamdiaoImage = (ImageView) findViewById(R.id.kamdiaoImage);
         ImageButton spekerButton  = (ImageButton)findViewById(R.id.spekerButton);

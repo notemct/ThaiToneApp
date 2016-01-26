@@ -29,10 +29,6 @@ public class KamGroup extends Model {
     @Column(name = "PictureWord")
     public String pictureword;
 
-    public List<KamGroup> kamGroupss() {
-        return getMany(KamGroup.class, "SET_ID");
-    }
-
     public static List<KamGroup> getAll(){
         return new Select().from(KamGroup.class).execute();
     }
