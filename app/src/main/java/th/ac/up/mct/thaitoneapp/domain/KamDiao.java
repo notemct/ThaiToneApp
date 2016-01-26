@@ -21,9 +21,8 @@ public class KamDiao extends Model {
     @Column(name = "PictureWord")
     public String pictureword;
 
-    public List<KamDiao> kamDiaoss() {
-        return getMany(KamDiao.class, "SET_ID");
-    }
+    @Column(name = "SoundTH")
+    public  String soundth;
 
     public static List<KamDiao> getAll(){
         return new Select().from(KamDiao.class).execute();

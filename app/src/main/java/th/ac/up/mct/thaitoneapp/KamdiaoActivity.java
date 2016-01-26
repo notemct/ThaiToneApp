@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import th.ac.up.mct.thaitoneapp.domain.KamDiao;
@@ -22,25 +23,17 @@ public class KamdiaoActivity extends ActionBarActivity {
         setContentView(R.layout.activity_kamdiao);
 
         inflater = LayoutInflater.from(this);
-        kamdiaoactivityMainLayout = (LinearLayout)findViewById(R.id.kamdiaoactivityMainLayout);
+
+        ImageView kamdiaoImage = (ImageView) findViewById(R.id.kamdiaoImage);
 
 
         Intent intent = getIntent();
         long kamdiaoId = intent.getLongExtra("KAMDIAO_ID", 0);
-        KamDiao set = KamDiao.get(kamdiaoId);
+        KamDiao kamDioao = KamDiao.get(kamdiaoId);
         //currentKamdiao = KamDiao.get(kamdiaoId);
-        for (KamDiao k : set.kamDiaoss()){
-            KamdiaoButton kamdiaoactivitybtn = new KamdiaoButton(this);
-            int id = getResources().getIdentifier(k.pictureword, "drawable", getPackageName());
-            Log.i("ID", Integer.toString(id));
-            kamdiaoactivitybtn.setBackgroundResource(id);
-            kamdiaoactivitybtn.setKamdiaoactivity(k);
-            kamdiaoactivitybtn.setLayoutParams(new LinearLayout.LayoutParams(300, 300));
-            // kamdiaoBtn.setText(k.kamThai);
-            //kamdiaoactivitybtn.setOnClickListener(kamWordOnClickListener);
-            kamdiaoactivityMainLayout.addView(kamdiaoactivitybtn);
+        int id = getResources().getIdentifier(kamDioao.pictureword,"drawable",getPackageName());
+        kamdiaoImage.setBackgroundResource(id);
 
-        }
 
 
 
