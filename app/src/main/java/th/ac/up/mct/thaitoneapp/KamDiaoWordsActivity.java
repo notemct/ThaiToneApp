@@ -54,7 +54,7 @@ public class KamDiaoWordsActivity extends ActionBarActivity {
             kamdiaowordbtn.setBackgroundResource(id);
             kamdiaowordbtn.setKamDiao(k);
             kamdiaowordbtn.setLayoutParams(new LinearLayout.LayoutParams(300, 300));
-           // kamdiaoBtn.setText(k.kamThai);
+            // kamdiaoBtn.setText(k.kamThai);
             kamdiaowordbtn.setOnClickListener(kamWordOnClickListener);
             kamdiaoWordsMainLayout.addView(kamdiaowordbtn);
         }
